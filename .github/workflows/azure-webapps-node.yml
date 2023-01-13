@@ -21,6 +21,19 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+          
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: |
+            startsWith(github.repository, 'bibidu') && 
+            startsWith(github.ref, 'refs/tags/')
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+            draft: true
+
+          
+          
       - run: |
           git config --local user.email "bot@github.com"
           git config --local user.name "bot"
