@@ -22,8 +22,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: |
-          git config --local user.email "787753295@qq.com"
-          git config --local user.name "bibidu"
+          git config --local user.email "bot@github.com"
+          git config --local user.name "bot"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           npm i
           node build.js
