@@ -1,7 +1,5 @@
-console.log(1234)
+const axios = require("axios");
 
-fetch('https://www.v2ex.com/api/nodes/list.json?fields=name,title,topics,aliases&sort_by=topics&reverse=1').then(res => {
-  if (res.ok) {
-    return res.json()
-  }
-}).then(console.log)
+const url = "https://www.v2ex.com/api/nodes/list.json?fields=name,title,topics,aliases&sort_by=topics&reverse=1"
+// const url = "https://www.baidu.com";
+axios.get(url).then(console.log).catch(console.log);
