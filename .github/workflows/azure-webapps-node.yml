@@ -22,9 +22,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: |
-        git config --local user.email "787753295@qq.com"
-        git config --local user.name "bibidu"
-        npm i
-        node build.js
+          git config --local user.email "787753295@qq.com"
+          git config --local user.name "bibidu"
+          npm i
+          node build.js
 
           
