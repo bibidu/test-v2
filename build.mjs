@@ -1,6 +1,5 @@
-const fs = require("fs");
-const axios = require("axios");
-const { execSync } = require("child_process");
+import fs from 'fs'
+import axios from 'axios'
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
