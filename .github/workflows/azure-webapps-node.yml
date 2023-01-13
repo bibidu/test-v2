@@ -27,5 +27,8 @@ jobs:
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           npm i
           node build.js
+          git add .
+          git commit -m "feat: auto"
+          git push
 
           
