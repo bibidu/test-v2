@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: write
+  actions: write
+  
 jobs:
   build:
 
@@ -14,7 +18,8 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x]
-
+    
+      
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
