@@ -44,7 +44,7 @@ jobs:
 
     - name: npm install, build, and test
       run: |
-        echo "node build.js"
+          node build.js
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
