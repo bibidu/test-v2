@@ -8,7 +8,20 @@ function sendMessage(text) {
   axios.get(url);
 }
 
-sendMessage(`时间是 ${new Date().getTime()}`);
+sendMessage(`时间是 ${currentTime()}`);
+
+function currentTime() {
+  const pad = (value) => `0${value}`.slice(-2);
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = pad(date.getMonth() + 1);
+  const day = pad(date.getDate());
+  const hour = pad(date.getHours());
+  const min = pad(date.getMinutes());
+
+  return `${year}-${month}-${day} ${hour}:${min}`;
+}
+
 
 function cacheJob() {
   const url = "https://www.v2ex.com/api/topics/show.json?node_id=43";
