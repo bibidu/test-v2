@@ -8,7 +8,7 @@ function sendMessage(text) {
   axios.get(url);
 }
 
-sendMessage(`时间是 ${currentTime()}`);
+// sendMessage(`时间是 ${currentTime()}`);
 
 function currentTime() {
   const pad = (value) => `0${value}`.slice(-2);
